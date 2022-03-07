@@ -29,6 +29,7 @@ services:
     networks:
       - spotfinder
     labels:
+      - "traefik.wss.protocol=https"
       - "traefik.enable=true"
       - "traefik.http.routers.traefik.rule=Host(`traefik.splendorwrld.com`)"
       - "traefik.http.routers.traefik.entrypoints=websecure"
